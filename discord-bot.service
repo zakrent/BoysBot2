@@ -1,0 +1,13 @@
+[Unit]
+Description = Boys' discord bot
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/discord/DiscordBot.py
+WorkingDirectory=/home/discord/
+User=discord
+Group=discord
+
+[Install]
+WantedBy=multi-user.target
