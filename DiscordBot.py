@@ -218,18 +218,6 @@ async def _8ball(ctx, *, question: str):
              "Very doubtful."]
     await ctx.reply('{}'.format(random.choice(responses)))  
 
-@bot.command()
-async def rank(ctx):
-    if ctx.author.id == 277825914799128586:
-        #role = discord.utils.get(ctx.guild.roles, name='')
-        await ctx.reply('Solwer detected!')
-        await ctx.author.add_roles(role)
-
-@bot.command()
-async def derank(ctx):
-    #role = discord.utils.get(ctx.guild.roles, name='')
-    await ctx.author.remove_roles(role)
-
 @bot.command(aliases=['prune'])
 @commands.has_permissions(manage_messages=True)
 async def purge(ctx, limit: int = 100):
